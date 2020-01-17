@@ -23,3 +23,4 @@ FASE PRÁTICA - PROJETO
 * Construção de Ambiente OLTP
 * Instalação do STAR UML
 * Modelagem Lógica
+* Modelagem Física
