@@ -25,3 +25,4 @@ FASE PRÁTICA - PROJETO
 * Modelagem Lógica
 * Modelagem Física
 * Criação de Cargas / Scripts
+* Criação de Cursor
