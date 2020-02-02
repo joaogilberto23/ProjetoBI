@@ -24,3 +24,5 @@ FASE PRÁTICA - PROJETO
 * Instalação do STAR UML
 * Modelagem Lógica
 * Modelagem Física
+* Criação de Cargas / Scripts
+* Criação de Cursor
