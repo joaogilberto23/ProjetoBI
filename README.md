@@ -18,7 +18,7 @@ FASE PRÁTICA - PREPARAÇÃO DE AMBIENTE
 * Configuração do Reporting Services
 * Instalação do Data Tools
 
-FASE PRÁTICA - PROJETO
+FASE PRÁTICA - PROJETO - FASE 1 [COMERCIO - OLTP]
 
 * Construção de Ambiente OLTP
 * Instalação do STAR UML
@@ -26,3 +26,13 @@ FASE PRÁTICA - PROJETO
 * Modelagem Física
 * Criação de Cargas / Scripts
 * Criação de Cursor
+* Constraints e Integridade Referencial
+
+FASE PRÁTICA - PROJETO - FASE 2 [STAGE - OLAP]
+
+* Modelagem da Staging Area
+
+FASE PRÁTICA - PROJETO - FASE 3 [DATAWAEWHOUSE - OLAP]
+
+* Modelagem do Datawarehouse
+* Níveis de um Datawarehouse - Conceito de Grão
