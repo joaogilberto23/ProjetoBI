@@ -22,8 +22,8 @@ FASE PRÁTICA - PROJETO - FASE 1 [COMERCIO - OLTP]
 
 * Construção de Ambiente OLTP
 * Instalação do STAR UML
-* Modelagem Lógica
-* Modelagem Física
+* Modelagem Lógica - OLTP
+* Modelagem Física - OLTP
 * Criação de Cargas / Scripts
 * Criação de Cursor
 * Constraints e Integridade Referencial
@@ -31,6 +31,12 @@ FASE PRÁTICA - PROJETO - FASE 1 [COMERCIO - OLTP]
 FASE PRÁTICA - PROJETO - FASE 2 [STAGE - OLAP]
 
 * Modelagem da Staging Area
+* Modelagem Lógica - Staging Area
+* Tipos de Modelagem - Star x Snow Flake
+* Modelagem Física - Staging Area
+* Schemas para padronização
+* Integration Services
+* SSIS | Conexões
 
 FASE PRÁTICA - PROJETO - FASE 3 [DATAWAEWHOUSE - OLAP]
 
