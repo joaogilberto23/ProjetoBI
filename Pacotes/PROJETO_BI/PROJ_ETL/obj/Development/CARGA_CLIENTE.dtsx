@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="CARGA_CLIENTE"
   DTS:PackageType="5"
-  DTS:VersionBuild="6"
-  DTS:VersionGUID="{1E90DF5C-FC38-41BA-B866-1A3F4E99A157}">
+  DTS:VersionBuild="7"
+  DTS:VersionGUID="{05D6D5B1-8119-493B-915D-C498E51A9A2D}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -1163,13 +1163,13 @@ where [refTable].[ID_CLIENTE] = ?</property>
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
-      DTS:refId="Package\TRUNCATE ST_STAGE"
+      DTS:refId="Package\TRUNCATE ST_CLIENTE"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Execute SQL Task"
       DTS:DTSID="{0CCEFD16-923B-43B5-A60A-B1BC701BC6A3}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
-      DTS:ObjectName="TRUNCATE ST_STAGE"
+      DTS:ObjectName="TRUNCATE ST_CLIENTE"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
       DTS:ThreadHint="0">
       <DTS:Variables />
@@ -1185,7 +1185,7 @@ where [refTable].[ID_CLIENTE] = ?</property>
       DTS:refId="Package.PrecedenceConstraints[Constraint]"
       DTS:CreationName=""
       DTS:DTSID="{02F105FE-491B-41F3-902E-A5BF74DAE805}"
-      DTS:From="Package\TRUNCATE ST_STAGE"
+      DTS:From="Package\TRUNCATE ST_CLIENTE"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint"
       DTS:To="Package\STAGE CLIENTE" />
@@ -1203,27 +1203,27 @@ where [refTable].[ID_CLIENTE] = ?</property>
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="184,42"
-          Id="Package\TRUNCATE ST_STAGE"
-          TopLeft="39,76" />
-        <NodeLayout
           Size="155,42"
           Id="Package\STAGE CLIENTE"
           TopLeft="276,76" />
+        <NodeLayout
+          Size="193,42"
+          Id="Package\TRUNCATE ST_CLIENTE"
+          TopLeft="39,76" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="223,97">
+          TopLeft="232,97">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="53,0"
+              EndConnector="44,0"
               Start="0,0"
-              End="45.5,0">
+              End="36.5,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="45.5,0" />
+                    End="36.5,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1382,25 +1382,12 @@ where [refTable].[ID_CLIENTE] = ?</property>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\STAGE CLIENTE\CLIENTE">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
     design-time-name="Package\STAGE CLIENTE\PROCURA ENDEREÇO">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -1410,7 +1397,7 @@ where [refTable].[ID_CLIENTE] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -1432,6 +1419,19 @@ where [refTable].[ID_CLIENTE] = ?</property>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\STAGE CLIENTE\ST_CLIENTE">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\STAGE CLIENTE\CLIENTE">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>

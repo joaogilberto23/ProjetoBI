@@ -41,6 +41,7 @@ FASE PRÁTICA - PROJETO - FASE 2 [STAGE - OLAP]
 * Lookup e Data Conversion
 * Tratamento de Erros
 * Conexões Compartilhadas
+* Estratégia de Transformações
 
 FASE PRÁTICA - PROJETO - FASE 3 [DATAWAEWHOUSE - OLAP]
 

@@ -1,0 +1,631 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="8/5/2020 3:06:26 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="BISERVER01"
+  DTS:CreatorName="BISERVER01\Administrator"
+  DTS:DTSID="{5F75BCB7-0924-483B-96CF-F06355FA5164}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="14.0.3008.28"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="CARGA_PRODUTO"
+  DTS:PackageType="5"
+  DTS:VersionBuild="5"
+  DTS:VersionGUID="{6B478881-7249-4EBE-8AA6-FD286E5BC5C2}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\POPULA AREA STAGE"
+      DTS:CreationName="STOCK:SEQUENCE"
+      DTS:Description="Sequence Container"
+      DTS:DTSID="{FB0EA9E8-9A36-4146-BCFB-75EE9DF42B4C}"
+      DTS:ExecutableType="STOCK:SEQUENCE"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="POPULA AREA STAGE">
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\POPULA AREA STAGE\STAGE PRODUTO"
+          DTS:CreationName="Microsoft.Pipeline"
+          DTS:Description="Data Flow Task"
+          DTS:DTSID="{30044C0D-198A-4AF2-BCB7-BCF8020F90FC}"
+          DTS:ExecutableType="Microsoft.Pipeline"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="STAGE PRODUTO"
+          DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <pipeline
+              version="1">
+              <components>
+                <component
+                  refId="Package\POPULA AREA STAGE\STAGE PRODUTO\PRODUTO"
+                  componentClassID="Microsoft.OLEDBSource"
+                  contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+                  description="OLE DB Source"
+                  name="PRODUTO"
+                  usesDispositions="true"
+                  version="7">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                      name="CommandTimeout">0</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of the database object used to open a rowset."
+                      name="OpenRowset"></property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the variable that contains the name of the database object used to open a rowset."
+                      name="OpenRowsetVariable"></property>
+                    <property
+                      dataType="System.String"
+                      description="The SQL command to be executed."
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT        IDPRODUTO, PRODUTO, VALOR, CUSTO_MEDIO, ID_CATEGORIA
+FROM            PRODUTO</property>
+                    <property
+                      dataType="System.String"
+                      description="The variable that contains the SQL command to be executed."
+                      name="SqlCommandVariable"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the column code page to use when code page information is unavailable from the data source."
+                      name="DefaultCodePage">1252</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Forces the use of the DefaultCodePage property value when describing character data."
+                      name="AlwaysUseDefaultCodePage">false</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the mode used to access the database."
+                      name="AccessMode"
+                      typeConverter="AccessMode">2</property>
+                    <property
+                      dataType="System.String"
+                      description="The mappings between the parameters in the SQL command and variables."
+                      name="ParameterMapping"></property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\POPULA AREA STAGE\STAGE PRODUTO\PRODUTO.Connections[OleDbConnection]"
+                      connectionManagerID="{94CCC2E9-9D70-4313-84CF-0FEEF2CA05BD}:external"
+                      connectionManagerRefId="Project.ConnectionManagers[BISERVER01.COMERCIO_OLTP]"
+                      description="The OLE DB runtime connection used to access the database."
+                      name="OleDbConnection" />
+                  </connections>
+                  <outputs>
+                    <output
+                      refId="Package\POPULA AREA STAGE\STAGE PRODUTO\PRODUTO.Outputs[OLE DB Source Output]"
+                      name="OLE DB Source Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\POPULA AREA STAGE\STAGE PRODUTO\PRODUTO.Outputs[OLE DB Source Output].Columns[IDPRODUTO]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\POPULA AREA STAGE\STAGE PRODUTO\PRODUTO.Outputs[OLE DB Source Output].ExternalColumns[IDPRODUTO]"
+                          lineageId="Package\POPULA AREA STAGE\STAGE PRODUTO\PRODUTO.Outputs[OLE DB Source Output].Columns[IDPRODUTO]"
+                          name="IDPRODUTO"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\POPULA AREA STAGE\STAGE PRODUTO\PRODUTO.Outputs[OLE DB Source Output].Columns[PRODUTO]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\POPULA AREA STAGE\STAGE PRODUTO\PRODUTO.Outputs[OLE DB Source Output].ExternalColumns[PRODUTO]"
+                          length="100"
+                          lineageId="Package\POPULA AREA STAGE\STAGE PRODUTO\PRODUTO.Outputs[OLE DB Source Output].Columns[PRODUTO]"
+                          name="PRODUTO"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\POPULA AREA STAGE\STAGE PRODUTO\PRODUTO.Outputs[OLE DB Source Output].Columns[VALOR]"
+                          dataType="numeric"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\POPULA AREA STAGE\STAGE PRODUTO\PRODUTO.Outputs[OLE DB Source Output].ExternalColumns[VALOR]"
+                          lineageId="Package\POPULA AREA STAGE\STAGE PRODUTO\PRODUTO.Outputs[OLE DB Source Output].Columns[VALOR]"
+                          name="VALOR"
+                          precision="10"
+                          scale="2"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\POPULA AREA STAGE\STAGE PRODUTO\PRODUTO.Outputs[OLE DB Source Output].Columns[CUSTO_MEDIO]"
+                          dataType="numeric"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\POPULA AREA STAGE\STAGE PRODUTO\PRODUTO.Outputs[OLE DB Source Output].ExternalColumns[CUSTO_MEDIO]"
+                          lineageId="Package\POPULA AREA STAGE\STAGE PRODUTO\PRODUTO.Outputs[OLE DB Source Output].Columns[CUSTO_MEDIO]"
+                          name="CUSTO_MEDIO"
+                          precision="10"
+                          scale="2"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\POPULA AREA STAGE\STAGE PRODUTO\PRODUTO.Outputs[OLE DB Source Output].Columns[ID_CATEGORIA]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\POPULA AREA STAGE\STAGE PRODUTO\PRODUTO.Outputs[OLE DB Source Output].ExternalColumns[ID_CATEGORIA]"
+                          lineageId="Package\POPULA AREA STAGE\STAGE PRODUTO\PRODUTO.Outputs[OLE DB Source Output].Columns[ID_CATEGORIA]"
+                          name="ID_CATEGORIA"
+                          truncationRowDisposition="FailComponent" />
+                      </outputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\POPULA AREA STAGE\STAGE PRODUTO\PRODUTO.Outputs[OLE DB Source Output].ExternalColumns[IDPRODUTO]"
+                          dataType="i4"
+                          name="IDPRODUTO" />
+                        <externalMetadataColumn
+                          refId="Package\POPULA AREA STAGE\STAGE PRODUTO\PRODUTO.Outputs[OLE DB Source Output].ExternalColumns[PRODUTO]"
+                          codePage="1252"
+                          dataType="str"
+                          length="100"
+                          name="PRODUTO" />
+                        <externalMetadataColumn
+                          refId="Package\POPULA AREA STAGE\STAGE PRODUTO\PRODUTO.Outputs[OLE DB Source Output].ExternalColumns[VALOR]"
+                          dataType="numeric"
+                          name="VALOR"
+                          precision="10"
+                          scale="2" />
+                        <externalMetadataColumn
+                          refId="Package\POPULA AREA STAGE\STAGE PRODUTO\PRODUTO.Outputs[OLE DB Source Output].ExternalColumns[CUSTO_MEDIO]"
+                          dataType="numeric"
+                          name="CUSTO_MEDIO"
+                          precision="10"
+                          scale="2" />
+                        <externalMetadataColumn
+                          refId="Package\POPULA AREA STAGE\STAGE PRODUTO\PRODUTO.Outputs[OLE DB Source Output].ExternalColumns[ID_CATEGORIA]"
+                          dataType="i4"
+                          name="ID_CATEGORIA" />
+                      </externalMetadataColumns>
+                    </output>
+                    <output
+                      refId="Package\POPULA AREA STAGE\STAGE PRODUTO\PRODUTO.Outputs[OLE DB Source Error Output]"
+                      isErrorOut="true"
+                      name="OLE DB Source Error Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\POPULA AREA STAGE\STAGE PRODUTO\PRODUTO.Outputs[OLE DB Source Error Output].Columns[IDPRODUTO]"
+                          dataType="i4"
+                          lineageId="Package\POPULA AREA STAGE\STAGE PRODUTO\PRODUTO.Outputs[OLE DB Source Error Output].Columns[IDPRODUTO]"
+                          name="IDPRODUTO" />
+                        <outputColumn
+                          refId="Package\POPULA AREA STAGE\STAGE PRODUTO\PRODUTO.Outputs[OLE DB Source Error Output].Columns[PRODUTO]"
+                          codePage="1252"
+                          dataType="str"
+                          length="100"
+                          lineageId="Package\POPULA AREA STAGE\STAGE PRODUTO\PRODUTO.Outputs[OLE DB Source Error Output].Columns[PRODUTO]"
+                          name="PRODUTO" />
+                        <outputColumn
+                          refId="Package\POPULA AREA STAGE\STAGE PRODUTO\PRODUTO.Outputs[OLE DB Source Error Output].Columns[VALOR]"
+                          dataType="numeric"
+                          lineageId="Package\POPULA AREA STAGE\STAGE PRODUTO\PRODUTO.Outputs[OLE DB Source Error Output].Columns[VALOR]"
+                          name="VALOR"
+                          precision="10"
+                          scale="2" />
+                        <outputColumn
+                          refId="Package\POPULA AREA STAGE\STAGE PRODUTO\PRODUTO.Outputs[OLE DB Source Error Output].Columns[CUSTO_MEDIO]"
+                          dataType="numeric"
+                          lineageId="Package\POPULA AREA STAGE\STAGE PRODUTO\PRODUTO.Outputs[OLE DB Source Error Output].Columns[CUSTO_MEDIO]"
+                          name="CUSTO_MEDIO"
+                          precision="10"
+                          scale="2" />
+                        <outputColumn
+                          refId="Package\POPULA AREA STAGE\STAGE PRODUTO\PRODUTO.Outputs[OLE DB Source Error Output].Columns[ID_CATEGORIA]"
+                          dataType="i4"
+                          lineageId="Package\POPULA AREA STAGE\STAGE PRODUTO\PRODUTO.Outputs[OLE DB Source Error Output].Columns[ID_CATEGORIA]"
+                          name="ID_CATEGORIA" />
+                        <outputColumn
+                          refId="Package\POPULA AREA STAGE\STAGE PRODUTO\PRODUTO.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\POPULA AREA STAGE\STAGE PRODUTO\PRODUTO.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\POPULA AREA STAGE\STAGE PRODUTO\PRODUTO.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\POPULA AREA STAGE\STAGE PRODUTO\PRODUTO.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\POPULA AREA STAGE\STAGE PRODUTO\ST_PRODUTO"
+                  componentClassID="Microsoft.OLEDBDestination"
+                  contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+                  description="OLE DB Destination"
+                  name="ST_PRODUTO"
+                  usesDispositions="true"
+                  version="4">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                      name="CommandTimeout">0</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of the database object used to open a rowset."
+                      name="OpenRowset">[dbo].[ST_PRODUTO]</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the variable that contains the name of the database object used to open a rowset."
+                      name="OpenRowsetVariable"></property>
+                    <property
+                      dataType="System.String"
+                      description="The SQL command to be executed."
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the column code page to use when code page information is unavailable from the data source."
+                      name="DefaultCodePage">1252</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Forces the use of the DefaultCodePage property value when describing character data."
+                      name="AlwaysUseDefaultCodePage">false</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the mode used to access the database."
+                      name="AccessMode"
+                      typeConverter="AccessMode">3</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepIdentity">false</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepNulls">false</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                      name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                      name="FastLoadMaxInsertCommitSize">2147483647</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\POPULA AREA STAGE\STAGE PRODUTO\ST_PRODUTO.Connections[OleDbConnection]"
+                      connectionManagerID="{DE256A38-29E3-44B1-B133-502A001986D0}:external"
+                      connectionManagerRefId="Project.ConnectionManagers[BISERVER01.COMERCIO_STAGE]"
+                      description="The OLE DB runtime connection used to access the database."
+                      name="OleDbConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\POPULA AREA STAGE\STAGE PRODUTO\ST_PRODUTO.Inputs[OLE DB Destination Input]"
+                      errorOrTruncationOperation="Insert"
+                      errorRowDisposition="FailComponent"
+                      hasSideEffects="true"
+                      name="OLE DB Destination Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\POPULA AREA STAGE\STAGE PRODUTO\ST_PRODUTO.Inputs[OLE DB Destination Input].Columns[IDPRODUTO]"
+                          cachedDataType="i4"
+                          cachedName="IDPRODUTO"
+                          externalMetadataColumnId="Package\POPULA AREA STAGE\STAGE PRODUTO\ST_PRODUTO.Inputs[OLE DB Destination Input].ExternalColumns[IDPRODUTO]"
+                          lineageId="Package\POPULA AREA STAGE\STAGE PRODUTO\PRODUTO.Outputs[OLE DB Source Output].Columns[IDPRODUTO]" />
+                        <inputColumn
+                          refId="Package\POPULA AREA STAGE\STAGE PRODUTO\ST_PRODUTO.Inputs[OLE DB Destination Input].Columns[CUSTO_MEDIO]"
+                          cachedDataType="numeric"
+                          cachedName="CUSTO_MEDIO"
+                          cachedPrecision="10"
+                          cachedScale="2"
+                          externalMetadataColumnId="Package\POPULA AREA STAGE\STAGE PRODUTO\ST_PRODUTO.Inputs[OLE DB Destination Input].ExternalColumns[CUSTO_MEDIO]"
+                          lineageId="Package\POPULA AREA STAGE\STAGE PRODUTO\PRODUTO.Outputs[OLE DB Source Output].Columns[CUSTO_MEDIO]" />
+                        <inputColumn
+                          refId="Package\POPULA AREA STAGE\STAGE PRODUTO\ST_PRODUTO.Inputs[OLE DB Destination Input].Columns[ID_CATEGORIA]"
+                          cachedDataType="i4"
+                          cachedName="ID_CATEGORIA"
+                          externalMetadataColumnId="Package\POPULA AREA STAGE\STAGE PRODUTO\ST_PRODUTO.Inputs[OLE DB Destination Input].ExternalColumns[ID_CATEGORIA]"
+                          lineageId="Package\POPULA AREA STAGE\STAGE PRODUTO\PRODUTO.Outputs[OLE DB Source Output].Columns[ID_CATEGORIA]" />
+                        <inputColumn
+                          refId="Package\POPULA AREA STAGE\STAGE PRODUTO\ST_PRODUTO.Inputs[OLE DB Destination Input].Columns[PRODUTO]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="100"
+                          cachedName="PRODUTO"
+                          externalMetadataColumnId="Package\POPULA AREA STAGE\STAGE PRODUTO\ST_PRODUTO.Inputs[OLE DB Destination Input].ExternalColumns[NOME]"
+                          lineageId="Package\POPULA AREA STAGE\STAGE PRODUTO\PRODUTO.Outputs[OLE DB Source Output].Columns[PRODUTO]" />
+                        <inputColumn
+                          refId="Package\POPULA AREA STAGE\STAGE PRODUTO\ST_PRODUTO.Inputs[OLE DB Destination Input].Columns[VALOR]"
+                          cachedDataType="numeric"
+                          cachedName="VALOR"
+                          cachedPrecision="10"
+                          cachedScale="2"
+                          externalMetadataColumnId="Package\POPULA AREA STAGE\STAGE PRODUTO\ST_PRODUTO.Inputs[OLE DB Destination Input].ExternalColumns[VALOR_UNITARIO]"
+                          lineageId="Package\POPULA AREA STAGE\STAGE PRODUTO\PRODUTO.Outputs[OLE DB Source Output].Columns[VALOR]" />
+                      </inputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\POPULA AREA STAGE\STAGE PRODUTO\ST_PRODUTO.Inputs[OLE DB Destination Input].ExternalColumns[IDPRODUTO]"
+                          dataType="i4"
+                          name="IDPRODUTO" />
+                        <externalMetadataColumn
+                          refId="Package\POPULA AREA STAGE\STAGE PRODUTO\ST_PRODUTO.Inputs[OLE DB Destination Input].ExternalColumns[NOME]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="NOME" />
+                        <externalMetadataColumn
+                          refId="Package\POPULA AREA STAGE\STAGE PRODUTO\ST_PRODUTO.Inputs[OLE DB Destination Input].ExternalColumns[VALOR_UNITARIO]"
+                          dataType="numeric"
+                          name="VALOR_UNITARIO"
+                          precision="10"
+                          scale="2" />
+                        <externalMetadataColumn
+                          refId="Package\POPULA AREA STAGE\STAGE PRODUTO\ST_PRODUTO.Inputs[OLE DB Destination Input].ExternalColumns[CUSTO_MEDIO]"
+                          dataType="numeric"
+                          name="CUSTO_MEDIO"
+                          precision="10"
+                          scale="2" />
+                        <externalMetadataColumn
+                          refId="Package\POPULA AREA STAGE\STAGE PRODUTO\ST_PRODUTO.Inputs[OLE DB Destination Input].ExternalColumns[ID_CATEGORIA]"
+                          dataType="i4"
+                          name="ID_CATEGORIA" />
+                      </externalMetadataColumns>
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\POPULA AREA STAGE\STAGE PRODUTO\ST_PRODUTO.Outputs[OLE DB Destination Error Output]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="OLE DB Destination Error Output"
+                      synchronousInputId="Package\POPULA AREA STAGE\STAGE PRODUTO\ST_PRODUTO.Inputs[OLE DB Destination Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\POPULA AREA STAGE\STAGE PRODUTO\ST_PRODUTO.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\POPULA AREA STAGE\STAGE PRODUTO\ST_PRODUTO.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\POPULA AREA STAGE\STAGE PRODUTO\ST_PRODUTO.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\POPULA AREA STAGE\STAGE PRODUTO\ST_PRODUTO.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+              </components>
+              <paths>
+                <path
+                  refId="Package\POPULA AREA STAGE\STAGE PRODUTO.Paths[OLE DB Source Output]"
+                  endId="Package\POPULA AREA STAGE\STAGE PRODUTO\ST_PRODUTO.Inputs[OLE DB Destination Input]"
+                  name="OLE DB Source Output"
+                  startId="Package\POPULA AREA STAGE\STAGE PRODUTO\PRODUTO.Outputs[OLE DB Source Output]" />
+              </paths>
+            </pipeline>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\POPULA AREA STAGE\TRUNCATE ST_PRODUTO"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{C7CA9EB6-C506-48AC-BA67-F811326E7CE3}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="TRUNCATE ST_PRODUTO"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{DE256A38-29E3-44B1-B133-502A001986D0}"
+              SQLTask:SqlStatementSource="TRUNCATE TABLE ST_PRODUTO" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:PrecedenceConstraints>
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\POPULA AREA STAGE.PrecedenceConstraints[Constraint]"
+          DTS:CreationName=""
+          DTS:DTSID="{A6FD0A64-5A5E-4443-BF36-E394720DE31E}"
+          DTS:From="Package\POPULA AREA STAGE\TRUNCATE ST_PRODUTO"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint"
+          DTS:To="Package\POPULA AREA STAGE\STAGE PRODUTO" />
+      </DTS:PrecedenceConstraints>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\PRODUTO CAMEL CASE"
+      DTS:CreationName="STOCK:SEQUENCE"
+      DTS:Description="Sequence Container"
+      DTS:DTSID="{2D39A924-8A2E-4A16-9508-246B3489F798}"
+      DTS:ExecutableType="STOCK:SEQUENCE"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="PRODUTO CAMEL CASE">
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\PRODUTO CAMEL CASE\EXECUTA CURSOR CAMEL CASE"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{17915415-CBF0-456B-914C-6C6A3B7BE31A}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="EXECUTA CURSOR CAMEL CASE"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{DE256A38-29E3-44B1-B133-502A001986D0}"
+              SQLTask:SqlStatementSource="EXEC CAMEL_CASE" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{591D04B4-9A57-4B8D-A229-603B9D5052D7}"
+      DTS:From="Package\POPULA AREA STAGE"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\PRODUTO CAMEL CASE" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="162,42"
+          Id="Package\POPULA AREA STAGE\STAGE PRODUTO"
+          TopLeft="25,94" />
+        <NodeLayout
+          Size="200,42"
+          Id="Package\POPULA AREA STAGE\TRUNCATE ST_PRODUTO"
+          TopLeft="12,13" />
+        <EdgeLayout
+          Id="Package\POPULA AREA STAGE.PrecedenceConstraints[Constraint]"
+          TopLeft="109,55">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,39"
+              Start="0,0"
+              End="0,31.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,31.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="217,167"
+          Size="217,210"
+          Id="Package\POPULA AREA STAGE"
+          TopLeft="41,43" />
+        <NodeLayout
+          Size="230,42"
+          Id="Package\PRODUTO CAMEL CASE\EXECUTA CURSOR CAMEL CASE"
+          TopLeft="21,40" />
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="268,166"
+          Size="268,209"
+          Id="Package\PRODUTO CAMEL CASE"
+          TopLeft="321,43" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="258,147.75">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="63,0"
+              Start="0,0"
+              End="55.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="55.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\POPULA AREA STAGE\STAGE PRODUTO">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="145,42"
+          Id="Package\POPULA AREA STAGE\STAGE PRODUTO\ST_PRODUTO"
+          TopLeft="303,69" />
+        <NodeLayout
+          Size="127,42"
+          Id="Package\POPULA AREA STAGE\STAGE PRODUTO\PRODUTO"
+          TopLeft="73,69" />
+        <EdgeLayout
+          Id="Package\POPULA AREA STAGE\STAGE PRODUTO.Paths[OLE DB Source Output]"
+          TopLeft="200,90">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="103,0"
+              Start="0,0"
+              End="95.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="95.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\POPULA AREA STAGE\STAGE PRODUTO\PRODUTO">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\POPULA AREA STAGE\STAGE PRODUTO\ST_PRODUTO">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

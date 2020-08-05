@@ -1,30 +1,30 @@
-<?xml version="1.0"?>
+﻿<?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
-  DTS:CreationDate="8/5/2020 2:54:24 AM"
+  DTS:CreationDate="8/5/2020 3:36:10 AM"
   DTS:CreationName="Microsoft.Package"
   DTS:CreatorComputerName="BISERVER01"
   DTS:CreatorName="BISERVER01\Administrator"
-  DTS:DTSID="{8E379BF5-A18C-4C5F-B14C-62DCDC6F4BDF}"
+  DTS:DTSID="{6159632F-E82F-4A3B-88A3-3C69B6B1653C}"
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="14.0.3008.28"
   DTS:LocaleID="1033"
-  DTS:ObjectName="CARGA_CATEGORIA"
+  DTS:ObjectName="CARGA_FORMA"
   DTS:PackageType="5"
-  DTS:VersionBuild="10"
-  DTS:VersionGUID="{DF998DCE-8BEB-4E36-A72D-9453A34004CE}">
+  DTS:VersionBuild="4"
+  DTS:VersionGUID="{ED5114EB-59F0-4A03-894D-2FDCFA3454FF}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
   <DTS:Executables>
     <DTS:Executable
-      DTS:refId="Package\STAGE CATEGORIA"
+      DTS:refId="Package\STAGE  FORMA"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
-      DTS:DTSID="{2E0AC849-CBC1-41F0-9416-C23004D45618}"
+      DTS:DTSID="{0E980DC7-72C1-497C-92C9-F74DAE814805}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
-      DTS:ObjectName="STAGE CATEGORIA"
+      DTS:ObjectName="STAGE  FORMA"
       DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
       <DTS:Variables />
       <DTS:ObjectData>
@@ -32,11 +32,11 @@
           version="1">
           <components>
             <component
-              refId="Package\STAGE CATEGORIA\CATEGORIA"
+              refId="Package\STAGE  FORMA\FORMA_PAGAMENTO"
               componentClassID="Microsoft.OLEDBSource"
               contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
               description="OLE DB Source"
-              name="CATEGORIA"
+              name="FORMA_PAGAMENTO"
               usesDispositions="true"
               version="7">
               <properties>
@@ -56,8 +56,8 @@
                   dataType="System.String"
                   description="The SQL command to be executed."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT        IDCATEGORIA, NOME
-FROM            CATEGORIA</property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT        IDFORMA, FORMA
+FROM            FORMA_PAGAMENTO</property>
                 <property
                   dataType="System.String"
                   description="The variable that contains the SQL command to be executed."
@@ -82,7 +82,7 @@ FROM            CATEGORIA</property>
               </properties>
               <connections>
                 <connection
-                  refId="Package\STAGE CATEGORIA\CATEGORIA.Connections[OleDbConnection]"
+                  refId="Package\STAGE  FORMA\FORMA_PAGAMENTO.Connections[OleDbConnection]"
                   connectionManagerID="{94CCC2E9-9D70-4313-84CF-0FEEF2CA05BD}:external"
                   connectionManagerRefId="Project.ConnectionManagers[BISERVER01.COMERCIO_OLTP]"
                   description="The OLE DB runtime connection used to access the database."
@@ -90,71 +90,71 @@ FROM            CATEGORIA</property>
               </connections>
               <outputs>
                 <output
-                  refId="Package\STAGE CATEGORIA\CATEGORIA.Outputs[OLE DB Source Output]"
+                  refId="Package\STAGE  FORMA\FORMA_PAGAMENTO.Outputs[OLE DB Source Output]"
                   name="OLE DB Source Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\STAGE CATEGORIA\CATEGORIA.Outputs[OLE DB Source Output].Columns[IDCATEGORIA]"
+                      refId="Package\STAGE  FORMA\FORMA_PAGAMENTO.Outputs[OLE DB Source Output].Columns[IDFORMA]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\STAGE CATEGORIA\CATEGORIA.Outputs[OLE DB Source Output].ExternalColumns[IDCATEGORIA]"
-                      lineageId="Package\STAGE CATEGORIA\CATEGORIA.Outputs[OLE DB Source Output].Columns[IDCATEGORIA]"
-                      name="IDCATEGORIA"
+                      externalMetadataColumnId="Package\STAGE  FORMA\FORMA_PAGAMENTO.Outputs[OLE DB Source Output].ExternalColumns[IDFORMA]"
+                      lineageId="Package\STAGE  FORMA\FORMA_PAGAMENTO.Outputs[OLE DB Source Output].Columns[IDFORMA]"
+                      name="IDFORMA"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\STAGE CATEGORIA\CATEGORIA.Outputs[OLE DB Source Output].Columns[NOME]"
+                      refId="Package\STAGE  FORMA\FORMA_PAGAMENTO.Outputs[OLE DB Source Output].Columns[FORMA]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\STAGE CATEGORIA\CATEGORIA.Outputs[OLE DB Source Output].ExternalColumns[NOME]"
-                      length="30"
-                      lineageId="Package\STAGE CATEGORIA\CATEGORIA.Outputs[OLE DB Source Output].Columns[NOME]"
-                      name="NOME"
+                      externalMetadataColumnId="Package\STAGE  FORMA\FORMA_PAGAMENTO.Outputs[OLE DB Source Output].ExternalColumns[FORMA]"
+                      length="40"
+                      lineageId="Package\STAGE  FORMA\FORMA_PAGAMENTO.Outputs[OLE DB Source Output].Columns[FORMA]"
+                      name="FORMA"
                       truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\STAGE CATEGORIA\CATEGORIA.Outputs[OLE DB Source Output].ExternalColumns[IDCATEGORIA]"
+                      refId="Package\STAGE  FORMA\FORMA_PAGAMENTO.Outputs[OLE DB Source Output].ExternalColumns[IDFORMA]"
                       dataType="i4"
-                      name="IDCATEGORIA" />
+                      name="IDFORMA" />
                     <externalMetadataColumn
-                      refId="Package\STAGE CATEGORIA\CATEGORIA.Outputs[OLE DB Source Output].ExternalColumns[NOME]"
+                      refId="Package\STAGE  FORMA\FORMA_PAGAMENTO.Outputs[OLE DB Source Output].ExternalColumns[FORMA]"
                       codePage="1252"
                       dataType="str"
-                      length="30"
-                      name="NOME" />
+                      length="40"
+                      name="FORMA" />
                   </externalMetadataColumns>
                 </output>
                 <output
-                  refId="Package\STAGE CATEGORIA\CATEGORIA.Outputs[OLE DB Source Error Output]"
+                  refId="Package\STAGE  FORMA\FORMA_PAGAMENTO.Outputs[OLE DB Source Error Output]"
                   isErrorOut="true"
                   name="OLE DB Source Error Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\STAGE CATEGORIA\CATEGORIA.Outputs[OLE DB Source Error Output].Columns[IDCATEGORIA]"
+                      refId="Package\STAGE  FORMA\FORMA_PAGAMENTO.Outputs[OLE DB Source Error Output].Columns[IDFORMA]"
                       dataType="i4"
-                      lineageId="Package\STAGE CATEGORIA\CATEGORIA.Outputs[OLE DB Source Error Output].Columns[IDCATEGORIA]"
-                      name="IDCATEGORIA" />
+                      lineageId="Package\STAGE  FORMA\FORMA_PAGAMENTO.Outputs[OLE DB Source Error Output].Columns[IDFORMA]"
+                      name="IDFORMA" />
                     <outputColumn
-                      refId="Package\STAGE CATEGORIA\CATEGORIA.Outputs[OLE DB Source Error Output].Columns[NOME]"
+                      refId="Package\STAGE  FORMA\FORMA_PAGAMENTO.Outputs[OLE DB Source Error Output].Columns[FORMA]"
                       codePage="1252"
                       dataType="str"
-                      length="30"
-                      lineageId="Package\STAGE CATEGORIA\CATEGORIA.Outputs[OLE DB Source Error Output].Columns[NOME]"
-                      name="NOME" />
+                      length="40"
+                      lineageId="Package\STAGE  FORMA\FORMA_PAGAMENTO.Outputs[OLE DB Source Error Output].Columns[FORMA]"
+                      name="FORMA" />
                     <outputColumn
-                      refId="Package\STAGE CATEGORIA\CATEGORIA.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      refId="Package\STAGE  FORMA\FORMA_PAGAMENTO.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\STAGE CATEGORIA\CATEGORIA.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      lineageId="Package\STAGE  FORMA\FORMA_PAGAMENTO.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\STAGE CATEGORIA\CATEGORIA.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      refId="Package\STAGE  FORMA\FORMA_PAGAMENTO.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\STAGE CATEGORIA\CATEGORIA.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\STAGE  FORMA\FORMA_PAGAMENTO.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -163,11 +163,11 @@ FROM            CATEGORIA</property>
               </outputs>
             </component>
             <component
-              refId="Package\STAGE CATEGORIA\ST_CATEGORIA"
+              refId="Package\STAGE  FORMA\ST_FORMA"
               componentClassID="Microsoft.OLEDBDestination"
               contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
               description="OLE DB Destination"
-              name="ST_CATEGORIA"
+              name="ST_FORMA"
               usesDispositions="true"
               version="4">
               <properties>
@@ -178,7 +178,7 @@ FROM            CATEGORIA</property>
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[dbo].[ST_CATEGORIA]</property>
+                  name="OpenRowset">[dbo].[ST_FORMA]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -220,7 +220,7 @@ FROM            CATEGORIA</property>
               </properties>
               <connections>
                 <connection
-                  refId="Package\STAGE CATEGORIA\ST_CATEGORIA.Connections[OleDbConnection]"
+                  refId="Package\STAGE  FORMA\ST_FORMA.Connections[OleDbConnection]"
                   connectionManagerID="{DE256A38-29E3-44B1-B133-502A001986D0}:external"
                   connectionManagerRefId="Project.ConnectionManagers[BISERVER01.COMERCIO_STAGE]"
                   description="The OLE DB runtime connection used to access the database."
@@ -228,60 +228,60 @@ FROM            CATEGORIA</property>
               </connections>
               <inputs>
                 <input
-                  refId="Package\STAGE CATEGORIA\ST_CATEGORIA.Inputs[OLE DB Destination Input]"
+                  refId="Package\STAGE  FORMA\ST_FORMA.Inputs[OLE DB Destination Input]"
                   errorOrTruncationOperation="Insert"
                   errorRowDisposition="FailComponent"
                   hasSideEffects="true"
                   name="OLE DB Destination Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\STAGE CATEGORIA\ST_CATEGORIA.Inputs[OLE DB Destination Input].Columns[IDCATEGORIA]"
+                      refId="Package\STAGE  FORMA\ST_FORMA.Inputs[OLE DB Destination Input].Columns[IDFORMA]"
                       cachedDataType="i4"
-                      cachedName="IDCATEGORIA"
-                      externalMetadataColumnId="Package\STAGE CATEGORIA\ST_CATEGORIA.Inputs[OLE DB Destination Input].ExternalColumns[IDCATEGORIA]"
-                      lineageId="Package\STAGE CATEGORIA\CATEGORIA.Outputs[OLE DB Source Output].Columns[IDCATEGORIA]" />
+                      cachedName="IDFORMA"
+                      externalMetadataColumnId="Package\STAGE  FORMA\ST_FORMA.Inputs[OLE DB Destination Input].ExternalColumns[IDFORMA]"
+                      lineageId="Package\STAGE  FORMA\FORMA_PAGAMENTO.Outputs[OLE DB Source Output].Columns[IDFORMA]" />
                     <inputColumn
-                      refId="Package\STAGE CATEGORIA\ST_CATEGORIA.Inputs[OLE DB Destination Input].Columns[NOME]"
+                      refId="Package\STAGE  FORMA\ST_FORMA.Inputs[OLE DB Destination Input].Columns[FORMA]"
                       cachedCodepage="1252"
                       cachedDataType="str"
-                      cachedLength="30"
-                      cachedName="NOME"
-                      externalMetadataColumnId="Package\STAGE CATEGORIA\ST_CATEGORIA.Inputs[OLE DB Destination Input].ExternalColumns[NOME]"
-                      lineageId="Package\STAGE CATEGORIA\CATEGORIA.Outputs[OLE DB Source Output].Columns[NOME]" />
+                      cachedLength="40"
+                      cachedName="FORMA"
+                      externalMetadataColumnId="Package\STAGE  FORMA\ST_FORMA.Inputs[OLE DB Destination Input].ExternalColumns[FORMA]"
+                      lineageId="Package\STAGE  FORMA\FORMA_PAGAMENTO.Outputs[OLE DB Source Output].Columns[FORMA]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\STAGE CATEGORIA\ST_CATEGORIA.Inputs[OLE DB Destination Input].ExternalColumns[IDCATEGORIA]"
+                      refId="Package\STAGE  FORMA\ST_FORMA.Inputs[OLE DB Destination Input].ExternalColumns[IDFORMA]"
                       dataType="i4"
-                      name="IDCATEGORIA" />
+                      name="IDFORMA" />
                     <externalMetadataColumn
-                      refId="Package\STAGE CATEGORIA\ST_CATEGORIA.Inputs[OLE DB Destination Input].ExternalColumns[NOME]"
+                      refId="Package\STAGE  FORMA\ST_FORMA.Inputs[OLE DB Destination Input].ExternalColumns[FORMA]"
                       codePage="1252"
                       dataType="str"
-                      length="50"
-                      name="NOME" />
+                      length="30"
+                      name="FORMA" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\STAGE CATEGORIA\ST_CATEGORIA.Outputs[OLE DB Destination Error Output]"
+                  refId="Package\STAGE  FORMA\ST_FORMA.Outputs[OLE DB Destination Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="OLE DB Destination Error Output"
-                  synchronousInputId="Package\STAGE CATEGORIA\ST_CATEGORIA.Inputs[OLE DB Destination Input]">
+                  synchronousInputId="Package\STAGE  FORMA\ST_FORMA.Inputs[OLE DB Destination Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\STAGE CATEGORIA\ST_CATEGORIA.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      refId="Package\STAGE  FORMA\ST_FORMA.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\STAGE CATEGORIA\ST_CATEGORIA.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      lineageId="Package\STAGE  FORMA\ST_FORMA.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\STAGE CATEGORIA\ST_CATEGORIA.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      refId="Package\STAGE  FORMA\ST_FORMA.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\STAGE CATEGORIA\ST_CATEGORIA.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\STAGE  FORMA\ST_FORMA.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -292,29 +292,29 @@ FROM            CATEGORIA</property>
           </components>
           <paths>
             <path
-              refId="Package\STAGE CATEGORIA.Paths[OLE DB Source Output]"
-              endId="Package\STAGE CATEGORIA\ST_CATEGORIA.Inputs[OLE DB Destination Input]"
+              refId="Package\STAGE  FORMA.Paths[OLE DB Source Output]"
+              endId="Package\STAGE  FORMA\ST_FORMA.Inputs[OLE DB Destination Input]"
               name="OLE DB Source Output"
-              startId="Package\STAGE CATEGORIA\CATEGORIA.Outputs[OLE DB Source Output]" />
+              startId="Package\STAGE  FORMA\FORMA_PAGAMENTO.Outputs[OLE DB Source Output]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
-      DTS:refId="Package\TRUNCATE ST_CATEGORIA"
+      DTS:refId="Package\TRUNCATE ST_FORMA"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Execute SQL Task"
-      DTS:DTSID="{BA6B843C-81CE-4857-A210-B2BD80067957}"
+      DTS:DTSID="{AE10AE22-B8B0-4A79-86C4-3AD95A020808}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
-      DTS:ObjectName="TRUNCATE ST_CATEGORIA"
+      DTS:ObjectName="TRUNCATE ST_FORMA"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
       DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{DE256A38-29E3-44B1-B133-502A001986D0}"
-          SQLTask:SqlStatementSource="TRUNCATE TABLE ST_CATEGORIA" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="TRUNCATE TABLE ST_FORMA" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
   </DTS:Executables>
@@ -322,11 +322,11 @@ FROM            CATEGORIA</property>
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint]"
       DTS:CreationName=""
-      DTS:DTSID="{F660493F-9EBE-4FAF-B666-45D524A0DF36}"
-      DTS:From="Package\TRUNCATE ST_CATEGORIA"
+      DTS:DTSID="{C5F6E869-749E-4944-BC99-F4625B7CAB9B}"
+      DTS:From="Package\TRUNCATE ST_FORMA"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint"
-      DTS:To="Package\STAGE CATEGORIA" />
+      DTS:To="Package\STAGE  FORMA" />
   </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
@@ -341,27 +341,27 @@ FROM            CATEGORIA</property>
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="212,42"
-          Id="Package\TRUNCATE ST_CATEGORIA"
-          TopLeft="61,80" />
+          Size="152,42"
+          Id="Package\STAGE  FORMA"
+          TopLeft="106,205" />
         <NodeLayout
-          Size="171,42"
-          Id="Package\STAGE CATEGORIA"
-          TopLeft="344,79" />
+          Size="187,42"
+          Id="Package\TRUNCATE ST_FORMA"
+          TopLeft="93,95" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="273,100.5">
+          TopLeft="184.25,137">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="71,0"
+              EndConnector="0,68"
               Start="0,0"
-              End="63.5,0">
+              End="0,60.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="63.5,0" />
+                    End="0,60.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -374,32 +374,32 @@ FROM            CATEGORIA</property>
     </LayoutInfo>
   </Package>
   <TaskHost
-    design-time-name="Package\STAGE CATEGORIA">
+    design-time-name="Package\STAGE  FORMA">
     <LayoutInfo>
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="136,42"
-          Id="Package\STAGE CATEGORIA\CATEGORIA"
-          TopLeft="72,78" />
+          Size="131,42"
+          Id="Package\STAGE  FORMA\ST_FORMA"
+          TopLeft="381,113" />
         <NodeLayout
-          Size="154,42"
-          Id="Package\STAGE CATEGORIA\ST_CATEGORIA"
-          TopLeft="285,77" />
+          Size="180,42"
+          Id="Package\STAGE  FORMA\FORMA_PAGAMENTO"
+          TopLeft="112,114" />
         <EdgeLayout
-          Id="Package\STAGE CATEGORIA.Paths[OLE DB Source Output]"
-          TopLeft="208,98.5">
+          Id="Package\STAGE  FORMA.Paths[OLE DB Source Output]"
+          TopLeft="292,134.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="77,0"
+              EndConnector="89,0"
               Start="0,0"
-              End="69.5,0">
+              End="81.5,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="69.5,0" />
+                    End="81.5,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -412,7 +412,7 @@ FROM            CATEGORIA</property>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\STAGE CATEGORIA\CATEGORIA">
+    design-time-name="Package\STAGE  FORMA\FORMA_PAGAMENTO">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -420,7 +420,7 @@ FROM            CATEGORIA</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\STAGE CATEGORIA\ST_CATEGORIA">
+    design-time-name="Package\STAGE  FORMA\ST_FORMA">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>

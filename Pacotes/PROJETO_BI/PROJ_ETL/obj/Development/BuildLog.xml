@@ -2,13 +2,13 @@
 <BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
     <Name>PROJ_ETL</Name>
-    <LastWriteTime>2020-08-05T05:58:55.2075052Z</LastWriteTime>
+    <LastWriteTime>2020-08-05T06:57:44.0872275Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
     <ProjectBuildItemInfo>
       <Name>CARGA_CLIENTE.dtsx</Name>
-      <LastWriteTime>2020-08-05T05:50:07.4261034Z</LastWriteTime>
+      <LastWriteTime>2020-08-05T07:05:00.7663246Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
@@ -18,7 +18,32 @@
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>CARGA_CATEGORIA.dtsx</Name>
-      <LastWriteTime>2020-08-05T05:58:54.9065081Z</LastWriteTime>
+      <LastWriteTime>2020-08-05T06:01:59.1230384Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>CARGA_PRODUTO.dtsx</Name>
+      <LastWriteTime>2020-08-05T07:06:40.251679Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>CARGA_FORMA.dtsx</Name>
+      <LastWriteTime>2020-08-05T07:05:32.1063489Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>CARGA_FORNECEDOR.dtsx</Name>
+      <LastWriteTime>2020-08-05T06:49:07.9609294Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>CARGA_NOTA.dtsx</Name>
+      <LastWriteTime>2020-08-05T07:06:02.3483254Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>CARGA_FATO.dtsx</Name>
+      <LastWriteTime>2020-08-05T07:09:27.5918768Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>
