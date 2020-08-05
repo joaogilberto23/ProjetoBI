@@ -1,4 +1,4 @@
-# ProjetoBI
+﻿# ProjetoBI
 Curso - Master Business Intelligence | Udemy (Felipe Mafra)
 
 FASE TEÓRICA
@@ -37,6 +37,10 @@ FASE PRÁTICA - PROJETO - FASE 2 [STAGE - OLAP]
 * Schemas para padronização
 * Integration Services
 * SSIS | Conexões
+* Colunas Derivadas
+* Lookup e Data Conversion
+* Tratamento de Erros
+* Conexões Compartilhadas
 
 FASE PRÁTICA - PROJETO - FASE 3 [DATAWAEWHOUSE - OLAP]
 
