@@ -22,11 +22,13 @@ FASE PRÁTICA - PROJETO - FASE 1 [COMERCIO - OLTP]
 
 * Construção de Ambiente OLTP
 * Instalação do STAR UML
+* Modelagem do OLTP
 * Modelagem Lógica - OLTP
 * Modelagem Física - OLTP
 * Criação de Cargas / Scripts
 * Criação de Cursor
 * Constraints e Integridade Referencial
+* Carga de Dados
 
 FASE PRÁTICA - PROJETO - FASE 2 [STAGE - OLAP]
 
@@ -42,8 +44,20 @@ FASE PRÁTICA - PROJETO - FASE 2 [STAGE - OLAP]
 * Tratamento de Erros
 * Conexões Compartilhadas
 * Estratégia de Transformações
+* Modelagem de Dimensões
+* Modelagem de Fatos
+* Carga de Dados
 
 FASE PRÁTICA - PROJETO - FASE 3 [DATAWAEWHOUSE - OLAP]
 
-* Modelagem do Datawarehouse
 * Níveis de um Datawarehouse - Conceito de Grão
+* Datawarehouse x DataMart
+* Surrogate Keys e Slowly Changing Dimension
+* Modelagem do Datawarehouse
+* Modelagem Lógica - Datawarehouse
+* Modelagem Física - Datawarehouse
+* Gerando a Dimensão Tempo
+* Carregamento com Técnica de Intersecção
+* 
+* Carga de Dados
+
