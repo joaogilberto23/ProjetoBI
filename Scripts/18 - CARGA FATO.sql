@@ -6,7 +6,7 @@
 		GO
 
 		------------------------
-		--CRIA�AO DA PROCEDURE--
+		--CRIA�AO DA PROCEDURE--
 		------------------------
 
 		CREATE PROC CARGA_FATO
@@ -85,6 +85,6 @@
 			INNER JOIN DBO.DIM_TEMPO T
 			ON (CONVERT(VARCHAR, T.DATA,102) = CONVERT(VARCHAR,
 			F.DATA,102))
-			--WHERE F.DATA > @INICIAL AND F.DATA < @FINAL
-			WHERE F.DATA BETWEEN @INICIAL AND @FINAL
+			WHERE F.DATA > @INICIAL AND F.DATA < @FINAL -- Utilizar se for necessário realizar o processo mais de 1x por dia
+			--WHERE F.DATA BETWEEN @INICIAL AND @FINAL -- Utilizar se for necessário realizar o processo 1x por dia
 GO
