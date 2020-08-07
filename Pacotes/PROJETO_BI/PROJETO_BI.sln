@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.23107.0
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "PROJ_ETL", "PROJ_ETL\PROJ_ETL.dtproj", "{158B6820-5E7B-4731-B5ED-DA347DD28535}"
+EndProject
+Project("{D2ABAB84-BF74-430A-B69E-9DC6D40DDA17}") = "PROJ_OLAP", "PROJ_OLAP\PROJ_OLAP.dwproj", "{F0043D28-EEDD-48CF-89F7-41A5F05B7660}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -12,6 +14,9 @@ Global
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{158B6820-5E7B-4731-B5ED-DA347DD28535}.Development|Default.ActiveCfg = Development
 		{158B6820-5E7B-4731-B5ED-DA347DD28535}.Development|Default.Build.0 = Development
+		{F0043D28-EEDD-48CF-89F7-41A5F05B7660}.Development|Default.ActiveCfg = Development
+		{F0043D28-EEDD-48CF-89F7-41A5F05B7660}.Development|Default.Build.0 = Development
+		{F0043D28-EEDD-48CF-89F7-41A5F05B7660}.Development|Default.Deploy.0 = Development
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

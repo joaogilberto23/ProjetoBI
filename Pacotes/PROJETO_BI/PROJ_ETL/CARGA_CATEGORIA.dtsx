@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="CARGA_CATEGORIA"
   DTS:PackageType="5"
-  DTS:VersionBuild="12"
-  DTS:VersionGUID="{76B6236E-8812-497C-BFA5-CC720BFE05E4}">
+  DTS:VersionBuild="13"
+  DTS:VersionGUID="{A166B427-6FA4-47D3-9BA2-D55110CE9FC8}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -28,13 +28,13 @@
       <DTS:Variables />
       <DTS:Executables>
         <DTS:Executable
-          DTS:refId="Package\CARGA CATEGORIA DW\Data Flow Task"
+          DTS:refId="Package\CARGA CATEGORIA DW\CATEGORIA DW"
           DTS:CreationName="Microsoft.Pipeline"
           DTS:Description="Data Flow Task"
           DTS:DTSID="{2BF2A540-2DB7-4EC6-81D4-42DACC0F104E}"
           DTS:ExecutableType="Microsoft.Pipeline"
           DTS:LocaleID="-1"
-          DTS:ObjectName="Data Flow Task"
+          DTS:ObjectName="CATEGORIA DW"
           DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
           <DTS:Variables />
           <DTS:ObjectData>
@@ -42,7 +42,7 @@
               version="1">
               <components>
                 <component
-                  refId="Package\CARGA CATEGORIA DW\Data Flow Task\CATEGORIA STAGE"
+                  refId="Package\CARGA CATEGORIA DW\CATEGORIA DW\CATEGORIA STAGE"
                   componentClassID="Microsoft.OLEDBSource"
                   contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
                   description="OLE DB Source"
@@ -94,7 +94,7 @@ WHERE IDCATEGORIA NOT IN
                   </properties>
                   <connections>
                     <connection
-                      refId="Package\CARGA CATEGORIA DW\Data Flow Task\CATEGORIA STAGE.Connections[OleDbConnection]"
+                      refId="Package\CARGA CATEGORIA DW\CATEGORIA DW\CATEGORIA STAGE.Connections[OleDbConnection]"
                       connectionManagerID="{DE256A38-29E3-44B1-B133-502A001986D0}:external"
                       connectionManagerRefId="Project.ConnectionManagers[BISERVER01.COMERCIO_STAGE]"
                       description="The OLE DB runtime connection used to access the database."
@@ -102,38 +102,38 @@ WHERE IDCATEGORIA NOT IN
                   </connections>
                   <outputs>
                     <output
-                      refId="Package\CARGA CATEGORIA DW\Data Flow Task\CATEGORIA STAGE.Outputs[OLE DB Source Output]"
+                      refId="Package\CARGA CATEGORIA DW\CATEGORIA DW\CATEGORIA STAGE.Outputs[OLE DB Source Output]"
                       name="OLE DB Source Output">
                       <outputColumns>
                         <outputColumn
-                          refId="Package\CARGA CATEGORIA DW\Data Flow Task\CATEGORIA STAGE.Outputs[OLE DB Source Output].Columns[IDCATEGORIA]"
+                          refId="Package\CARGA CATEGORIA DW\CATEGORIA DW\CATEGORIA STAGE.Outputs[OLE DB Source Output].Columns[IDCATEGORIA]"
                           dataType="i4"
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\CARGA CATEGORIA DW\Data Flow Task\CATEGORIA STAGE.Outputs[OLE DB Source Output].ExternalColumns[IDCATEGORIA]"
-                          lineageId="Package\CARGA CATEGORIA DW\Data Flow Task\CATEGORIA STAGE.Outputs[OLE DB Source Output].Columns[IDCATEGORIA]"
+                          externalMetadataColumnId="Package\CARGA CATEGORIA DW\CATEGORIA DW\CATEGORIA STAGE.Outputs[OLE DB Source Output].ExternalColumns[IDCATEGORIA]"
+                          lineageId="Package\CARGA CATEGORIA DW\CATEGORIA DW\CATEGORIA STAGE.Outputs[OLE DB Source Output].Columns[IDCATEGORIA]"
                           name="IDCATEGORIA"
                           truncationRowDisposition="FailComponent" />
                         <outputColumn
-                          refId="Package\CARGA CATEGORIA DW\Data Flow Task\CATEGORIA STAGE.Outputs[OLE DB Source Output].Columns[NOME]"
+                          refId="Package\CARGA CATEGORIA DW\CATEGORIA DW\CATEGORIA STAGE.Outputs[OLE DB Source Output].Columns[NOME]"
                           codePage="1252"
                           dataType="str"
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\CARGA CATEGORIA DW\Data Flow Task\CATEGORIA STAGE.Outputs[OLE DB Source Output].ExternalColumns[NOME]"
+                          externalMetadataColumnId="Package\CARGA CATEGORIA DW\CATEGORIA DW\CATEGORIA STAGE.Outputs[OLE DB Source Output].ExternalColumns[NOME]"
                           length="50"
-                          lineageId="Package\CARGA CATEGORIA DW\Data Flow Task\CATEGORIA STAGE.Outputs[OLE DB Source Output].Columns[NOME]"
+                          lineageId="Package\CARGA CATEGORIA DW\CATEGORIA DW\CATEGORIA STAGE.Outputs[OLE DB Source Output].Columns[NOME]"
                           name="NOME"
                           truncationRowDisposition="FailComponent" />
                       </outputColumns>
                       <externalMetadataColumns
                         isUsed="True">
                         <externalMetadataColumn
-                          refId="Package\CARGA CATEGORIA DW\Data Flow Task\CATEGORIA STAGE.Outputs[OLE DB Source Output].ExternalColumns[IDCATEGORIA]"
+                          refId="Package\CARGA CATEGORIA DW\CATEGORIA DW\CATEGORIA STAGE.Outputs[OLE DB Source Output].ExternalColumns[IDCATEGORIA]"
                           dataType="i4"
                           name="IDCATEGORIA" />
                         <externalMetadataColumn
-                          refId="Package\CARGA CATEGORIA DW\Data Flow Task\CATEGORIA STAGE.Outputs[OLE DB Source Output].ExternalColumns[NOME]"
+                          refId="Package\CARGA CATEGORIA DW\CATEGORIA DW\CATEGORIA STAGE.Outputs[OLE DB Source Output].ExternalColumns[NOME]"
                           codePage="1252"
                           dataType="str"
                           length="50"
@@ -141,32 +141,32 @@ WHERE IDCATEGORIA NOT IN
                       </externalMetadataColumns>
                     </output>
                     <output
-                      refId="Package\CARGA CATEGORIA DW\Data Flow Task\CATEGORIA STAGE.Outputs[OLE DB Source Error Output]"
+                      refId="Package\CARGA CATEGORIA DW\CATEGORIA DW\CATEGORIA STAGE.Outputs[OLE DB Source Error Output]"
                       isErrorOut="true"
                       name="OLE DB Source Error Output">
                       <outputColumns>
                         <outputColumn
-                          refId="Package\CARGA CATEGORIA DW\Data Flow Task\CATEGORIA STAGE.Outputs[OLE DB Source Error Output].Columns[IDCATEGORIA]"
+                          refId="Package\CARGA CATEGORIA DW\CATEGORIA DW\CATEGORIA STAGE.Outputs[OLE DB Source Error Output].Columns[IDCATEGORIA]"
                           dataType="i4"
-                          lineageId="Package\CARGA CATEGORIA DW\Data Flow Task\CATEGORIA STAGE.Outputs[OLE DB Source Error Output].Columns[IDCATEGORIA]"
+                          lineageId="Package\CARGA CATEGORIA DW\CATEGORIA DW\CATEGORIA STAGE.Outputs[OLE DB Source Error Output].Columns[IDCATEGORIA]"
                           name="IDCATEGORIA" />
                         <outputColumn
-                          refId="Package\CARGA CATEGORIA DW\Data Flow Task\CATEGORIA STAGE.Outputs[OLE DB Source Error Output].Columns[NOME]"
+                          refId="Package\CARGA CATEGORIA DW\CATEGORIA DW\CATEGORIA STAGE.Outputs[OLE DB Source Error Output].Columns[NOME]"
                           codePage="1252"
                           dataType="str"
                           length="50"
-                          lineageId="Package\CARGA CATEGORIA DW\Data Flow Task\CATEGORIA STAGE.Outputs[OLE DB Source Error Output].Columns[NOME]"
+                          lineageId="Package\CARGA CATEGORIA DW\CATEGORIA DW\CATEGORIA STAGE.Outputs[OLE DB Source Error Output].Columns[NOME]"
                           name="NOME" />
                         <outputColumn
-                          refId="Package\CARGA CATEGORIA DW\Data Flow Task\CATEGORIA STAGE.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                          refId="Package\CARGA CATEGORIA DW\CATEGORIA DW\CATEGORIA STAGE.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                           dataType="i4"
-                          lineageId="Package\CARGA CATEGORIA DW\Data Flow Task\CATEGORIA STAGE.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                          lineageId="Package\CARGA CATEGORIA DW\CATEGORIA DW\CATEGORIA STAGE.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                           name="ErrorCode"
                           specialFlags="1" />
                         <outputColumn
-                          refId="Package\CARGA CATEGORIA DW\Data Flow Task\CATEGORIA STAGE.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                          refId="Package\CARGA CATEGORIA DW\CATEGORIA DW\CATEGORIA STAGE.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
                           dataType="i4"
-                          lineageId="Package\CARGA CATEGORIA DW\Data Flow Task\CATEGORIA STAGE.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                          lineageId="Package\CARGA CATEGORIA DW\CATEGORIA DW\CATEGORIA STAGE.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
                           name="ErrorColumn"
                           specialFlags="2" />
                       </outputColumns>
@@ -175,7 +175,7 @@ WHERE IDCATEGORIA NOT IN
                   </outputs>
                 </component>
                 <component
-                  refId="Package\CARGA CATEGORIA DW\Data Flow Task\TABELA CATEGORIA"
+                  refId="Package\CARGA CATEGORIA DW\CATEGORIA DW\TABELA CATEGORIA"
                   componentClassID="Microsoft.OLEDBDestination"
                   contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
                   description="OLE DB Destination"
@@ -232,7 +232,7 @@ WHERE IDCATEGORIA NOT IN
                   </properties>
                   <connections>
                     <connection
-                      refId="Package\CARGA CATEGORIA DW\Data Flow Task\TABELA CATEGORIA.Connections[OleDbConnection]"
+                      refId="Package\CARGA CATEGORIA DW\CATEGORIA DW\TABELA CATEGORIA.Connections[OleDbConnection]"
                       connectionManagerID="{83367385-70E4-4AC1-9309-99DCBB3AA190}:external"
                       connectionManagerRefId="Project.ConnectionManagers[BISERVER01.COMERCIO_DW]"
                       description="The OLE DB runtime connection used to access the database."
@@ -240,35 +240,35 @@ WHERE IDCATEGORIA NOT IN
                   </connections>
                   <inputs>
                     <input
-                      refId="Package\CARGA CATEGORIA DW\Data Flow Task\TABELA CATEGORIA.Inputs[OLE DB Destination Input]"
+                      refId="Package\CARGA CATEGORIA DW\CATEGORIA DW\TABELA CATEGORIA.Inputs[OLE DB Destination Input]"
                       errorOrTruncationOperation="Insert"
                       errorRowDisposition="FailComponent"
                       hasSideEffects="true"
                       name="OLE DB Destination Input">
                       <inputColumns>
                         <inputColumn
-                          refId="Package\CARGA CATEGORIA DW\Data Flow Task\TABELA CATEGORIA.Inputs[OLE DB Destination Input].Columns[IDCATEGORIA]"
+                          refId="Package\CARGA CATEGORIA DW\CATEGORIA DW\TABELA CATEGORIA.Inputs[OLE DB Destination Input].Columns[IDCATEGORIA]"
                           cachedDataType="i4"
                           cachedName="IDCATEGORIA"
-                          externalMetadataColumnId="Package\CARGA CATEGORIA DW\Data Flow Task\TABELA CATEGORIA.Inputs[OLE DB Destination Input].ExternalColumns[IDCATEGORIA]"
-                          lineageId="Package\CARGA CATEGORIA DW\Data Flow Task\CATEGORIA STAGE.Outputs[OLE DB Source Output].Columns[IDCATEGORIA]" />
+                          externalMetadataColumnId="Package\CARGA CATEGORIA DW\CATEGORIA DW\TABELA CATEGORIA.Inputs[OLE DB Destination Input].ExternalColumns[IDCATEGORIA]"
+                          lineageId="Package\CARGA CATEGORIA DW\CATEGORIA DW\CATEGORIA STAGE.Outputs[OLE DB Source Output].Columns[IDCATEGORIA]" />
                         <inputColumn
-                          refId="Package\CARGA CATEGORIA DW\Data Flow Task\TABELA CATEGORIA.Inputs[OLE DB Destination Input].Columns[NOME]"
+                          refId="Package\CARGA CATEGORIA DW\CATEGORIA DW\TABELA CATEGORIA.Inputs[OLE DB Destination Input].Columns[NOME]"
                           cachedCodepage="1252"
                           cachedDataType="str"
                           cachedLength="50"
                           cachedName="NOME"
-                          externalMetadataColumnId="Package\CARGA CATEGORIA DW\Data Flow Task\TABELA CATEGORIA.Inputs[OLE DB Destination Input].ExternalColumns[NOME]"
-                          lineageId="Package\CARGA CATEGORIA DW\Data Flow Task\CATEGORIA STAGE.Outputs[OLE DB Source Output].Columns[NOME]" />
+                          externalMetadataColumnId="Package\CARGA CATEGORIA DW\CATEGORIA DW\TABELA CATEGORIA.Inputs[OLE DB Destination Input].ExternalColumns[NOME]"
+                          lineageId="Package\CARGA CATEGORIA DW\CATEGORIA DW\CATEGORIA STAGE.Outputs[OLE DB Source Output].Columns[NOME]" />
                       </inputColumns>
                       <externalMetadataColumns
                         isUsed="True">
                         <externalMetadataColumn
-                          refId="Package\CARGA CATEGORIA DW\Data Flow Task\TABELA CATEGORIA.Inputs[OLE DB Destination Input].ExternalColumns[IDCATEGORIA]"
+                          refId="Package\CARGA CATEGORIA DW\CATEGORIA DW\TABELA CATEGORIA.Inputs[OLE DB Destination Input].ExternalColumns[IDCATEGORIA]"
                           dataType="i4"
                           name="IDCATEGORIA" />
                         <externalMetadataColumn
-                          refId="Package\CARGA CATEGORIA DW\Data Flow Task\TABELA CATEGORIA.Inputs[OLE DB Destination Input].ExternalColumns[NOME]"
+                          refId="Package\CARGA CATEGORIA DW\CATEGORIA DW\TABELA CATEGORIA.Inputs[OLE DB Destination Input].ExternalColumns[NOME]"
                           codePage="1252"
                           dataType="str"
                           length="50"
@@ -278,22 +278,22 @@ WHERE IDCATEGORIA NOT IN
                   </inputs>
                   <outputs>
                     <output
-                      refId="Package\CARGA CATEGORIA DW\Data Flow Task\TABELA CATEGORIA.Outputs[OLE DB Destination Error Output]"
+                      refId="Package\CARGA CATEGORIA DW\CATEGORIA DW\TABELA CATEGORIA.Outputs[OLE DB Destination Error Output]"
                       exclusionGroup="1"
                       isErrorOut="true"
                       name="OLE DB Destination Error Output"
-                      synchronousInputId="Package\CARGA CATEGORIA DW\Data Flow Task\TABELA CATEGORIA.Inputs[OLE DB Destination Input]">
+                      synchronousInputId="Package\CARGA CATEGORIA DW\CATEGORIA DW\TABELA CATEGORIA.Inputs[OLE DB Destination Input]">
                       <outputColumns>
                         <outputColumn
-                          refId="Package\CARGA CATEGORIA DW\Data Flow Task\TABELA CATEGORIA.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          refId="Package\CARGA CATEGORIA DW\CATEGORIA DW\TABELA CATEGORIA.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                           dataType="i4"
-                          lineageId="Package\CARGA CATEGORIA DW\Data Flow Task\TABELA CATEGORIA.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          lineageId="Package\CARGA CATEGORIA DW\CATEGORIA DW\TABELA CATEGORIA.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                           name="ErrorCode"
                           specialFlags="1" />
                         <outputColumn
-                          refId="Package\CARGA CATEGORIA DW\Data Flow Task\TABELA CATEGORIA.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          refId="Package\CARGA CATEGORIA DW\CATEGORIA DW\TABELA CATEGORIA.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                           dataType="i4"
-                          lineageId="Package\CARGA CATEGORIA DW\Data Flow Task\TABELA CATEGORIA.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          lineageId="Package\CARGA CATEGORIA DW\CATEGORIA DW\TABELA CATEGORIA.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                           name="ErrorColumn"
                           specialFlags="2" />
                       </outputColumns>
@@ -304,10 +304,10 @@ WHERE IDCATEGORIA NOT IN
               </components>
               <paths>
                 <path
-                  refId="Package\CARGA CATEGORIA DW\Data Flow Task.Paths[OLE DB Source Output]"
-                  endId="Package\CARGA CATEGORIA DW\Data Flow Task\TABELA CATEGORIA.Inputs[OLE DB Destination Input]"
+                  refId="Package\CARGA CATEGORIA DW\CATEGORIA DW.Paths[OLE DB Source Output]"
+                  endId="Package\CARGA CATEGORIA DW\CATEGORIA DW\TABELA CATEGORIA.Inputs[OLE DB Destination Input]"
                   name="OLE DB Source Output"
-                  startId="Package\CARGA CATEGORIA DW\Data Flow Task\CATEGORIA STAGE.Outputs[OLE DB Source Output]" />
+                  startId="Package\CARGA CATEGORIA DW\CATEGORIA DW\CATEGORIA STAGE.Outputs[OLE DB Source Output]" />
               </paths>
             </pipeline>
           </DTS:ObjectData>
@@ -660,9 +660,24 @@ FROM            CATEGORIA</property>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
+          Size="156,42"
+          Id="Package\CARGA CATEGORIA DW\CATEGORIA DW"
+          TopLeft="32,40" />
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="218,170"
+          Size="218,213"
+          Id="Package\CARGA CATEGORIA DW"
+          TopLeft="377,57" />
+        <NodeLayout
           Size="171,42"
           Id="Package\CARGA CATEGORIA STAGE\STAGE CATEGORIA"
           TopLeft="33,103" />
+        <NodeLayout
+          Size="212,42"
+          Id="Package\CARGA CATEGORIA STAGE\TRUNCATE ST_CATEGORIA"
+          TopLeft="14,22" />
         <EdgeLayout
           Id="Package\CARGA CATEGORIA STAGE.PrecedenceConstraints[Constraint]"
           TopLeft="119.25,64">
@@ -685,10 +700,6 @@ FROM            CATEGORIA</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="212,42"
-          Id="Package\CARGA CATEGORIA STAGE\TRUNCATE ST_CATEGORIA"
-          TopLeft="14,22" />
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
@@ -696,17 +707,6 @@ FROM            CATEGORIA</property>
           Size="236,216"
           Id="Package\CARGA CATEGORIA STAGE"
           TopLeft="39,50" />
-        <NodeLayout
-          Size="151,42"
-          Id="Package\CARGA CATEGORIA DW\Data Flow Task"
-          TopLeft="32,40" />
-        <ContainerLayout
-          HeaderHeight="43"
-          IsExpanded="True"
-          PanelSize="218,170"
-          Size="218,213"
-          Id="Package\CARGA CATEGORIA DW"
-          TopLeft="377,57" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
           TopLeft="275,160.75">
@@ -732,6 +732,70 @@ FROM            CATEGORIA</property>
       </GraphLayout>
     </LayoutInfo>
   </Package>
+  <TaskHost
+    design-time-name="Package\CARGA CATEGORIA DW\CATEGORIA DW">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="176,42"
+          Id="Package\CARGA CATEGORIA DW\CATEGORIA DW\TABELA CATEGORIA"
+          TopLeft="404,122" />
+        <NodeLayout
+          Size="171,42"
+          Id="Package\CARGA CATEGORIA DW\CATEGORIA DW\CATEGORIA STAGE"
+          TopLeft="125,121" />
+        <EdgeLayout
+          Id="Package\CARGA CATEGORIA DW\CATEGORIA DW.Paths[OLE DB Source Output]"
+          TopLeft="296,142.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="108,0"
+              Start="0,0"
+              End="100.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="100.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\CARGA CATEGORIA DW\CATEGORIA DW\CATEGORIA STAGE">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\CARGA CATEGORIA DW\CATEGORIA DW\TABELA CATEGORIA">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\CARGA CATEGORIA STAGE\STAGE CATEGORIA">
     <LayoutInfo>
@@ -780,70 +844,6 @@ FROM            CATEGORIA</property>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\CARGA CATEGORIA STAGE\STAGE CATEGORIA\ST_CATEGORIA">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <TaskHost
-    design-time-name="Package\CARGA CATEGORIA DW\Data Flow Task">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="171,42"
-          Id="Package\CARGA CATEGORIA DW\Data Flow Task\CATEGORIA STAGE"
-          TopLeft="125,121" />
-        <NodeLayout
-          Size="176,42"
-          Id="Package\CARGA CATEGORIA DW\Data Flow Task\TABELA CATEGORIA"
-          TopLeft="404,122" />
-        <EdgeLayout
-          Id="Package\CARGA CATEGORIA DW\Data Flow Task.Paths[OLE DB Source Output]"
-          TopLeft="296,142.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="108,0"
-              Start="0,0"
-              End="100.5,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="100.5,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\CARGA CATEGORIA DW\Data Flow Task\CATEGORIA STAGE">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\CARGA CATEGORIA DW\Data Flow Task\TABELA CATEGORIA">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
