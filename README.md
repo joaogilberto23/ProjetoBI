@@ -58,15 +58,23 @@ FASE PRÁTICA - PROJETO - FASE 3 [DATAWAEWHOUSE]
 * Modelagem Física - Datawarehouse
 * Gerando a Dimensão Tempo
 * Carregamento com Técnica de Intersecção
-* SCD (Slowly Changing Dimension)* 
+* SCD (Slowly Changing Dimension)
 * Carga de Dados nas Dimensões
 * Conferência de Cargas
 
 PRÉ-FASE 4
 
-* Gerencia de Projetos no Visual Studio
+* Gerência de Projetos no Visual Studio
 
 FASE PRÁTICA - PROJETO - FASE 4 [CUBO NO ANALYSIS SERVICES]
 
-*
-*
+* DataSource e DataSource View
+* Criando Dimensões | Trabalhando com Hierarquias
+* Criando o Cubo de Vendas
+
+FASE PRÁTICA - PROJETO - FASE 4 [REPORTING SERVICES]
+
+* Configuração de Servidor de Relatórios
+* 
+* 
+

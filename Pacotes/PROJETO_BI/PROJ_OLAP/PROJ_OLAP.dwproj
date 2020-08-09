@@ -6,10 +6,79 @@
     <Name>PROJ_OLAP.database</Name>
     <FullPath>PROJ_OLAP.database</FullPath>
   </Database>
+  <Cubes>
+    <ProjectItem>
+      <Name>CUBO_VENDAS.cube</Name>
+      <FullPath>CUBO_VENDAS.cube</FullPath>
+      <Dependencies>
+        <ProjectItem>
+          <Name>CUBO_VENDAS.partitions</Name>
+          <FullPath>CUBO_VENDAS.partitions</FullPath>
+        </ProjectItem>
+      </Dependencies>
+    </ProjectItem>
+  </Cubes>
+  <Dimensions>
+    <ProjectItem>
+      <Name>DIM CLIENTE.dim</Name>
+      <FullPath>DIM CLIENTE.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>DIM FORNECEDOR.dim</Name>
+      <FullPath>DIM FORNECEDOR.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>DIM VENDEDOR.dim</Name>
+      <FullPath>DIM VENDEDOR.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>DIM NOTA.dim</Name>
+      <FullPath>DIM NOTA.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>DIM FORMA.dim</Name>
+      <FullPath>DIM FORMA.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>DIM PRODUTO.dim</Name>
+      <FullPath>DIM PRODUTO.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>DIM TEMPO.dim</Name>
+      <FullPath>DIM TEMPO.dim</FullPath>
+    </ProjectItem>
+  </Dimensions>
+  <DataSources>
+    <ProjectItem>
+      <Name>DS_COMERCIO_DW.ds</Name>
+      <FullPath>DS_COMERCIO_DW.ds</FullPath>
+    </ProjectItem>
+  </DataSources>
+  <DataSourceViews>
+    <ProjectItem>
+      <Name>DSV_COMERCIO_DW.dsv</Name>
+      <FullPath>DSV_COMERCIO_DW.dsv</FullPath>
+    </ProjectItem>
+  </DataSourceViews>
   <Configurations>
     <Configuration>
       <Name>Development</Name>
-      <Options />
+      <Options>
+        <ConnectionMappings>
+          <ConfigurationSetting>
+            <Id>DS_COMERCIO_DW</Id>
+            <Name>DS_COMERCIO_DW</Name>
+            <Value xsi:type="xsd:string">Provider=SQLNCLI11.1;Data Source=BISERVER01;Integrated Security=SSPI;Initial Catalog=COMERCIO_DW</Value>
+          </ConfigurationSetting>
+        </ConnectionMappings>
+        <ConnectionSecurityMappings>
+          <ConfigurationSetting>
+            <Id>DS_COMERCIO_DW</Id>
+            <Name>DS_COMERCIO_DW</Name>
+            <Value xsi:type="xsd:int">0</Value>
+          </ConfigurationSetting>
+        </ConnectionSecurityMappings>
+      </Options>
     </Configuration>
   </Configurations>
 </Project>

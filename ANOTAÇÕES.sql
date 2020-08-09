@@ -49,6 +49,4 @@ COMANDOS SQL
 @@FETCH_STATUS - Comando automático do SQL Server que verifica se o curso ainda possui ou não registros, por padrão,
 seu valor é 0, quando ela não encontrar mais registros, muda para 1, por isso, deve ser sempre declarada inicialmente como 0.
 
-
-
 */
