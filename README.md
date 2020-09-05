@@ -95,6 +95,13 @@ FASE PRÁTICA - PROJETO - FASE 4 [REPORTING SERVICES]
 
 FASE PRÁTICA - PROJETO - FASE 5 [INFRAESTRUTURA]
 
-* 
-* 
-* 
+* Criando um Catálogo - o SSIS
+* Automatização de ETL - Criando Jobs e Steps
+* Automatizando o Processamento do Cubo
+* Monitoramento de Pacotes Automatizados
+
+FASE PRÁTICA - PROJETO - FASE FINAL [BI SELF SERVICE NO EXCEL]
+
+* Conectando o Excel ao Cubo
+
+FINALIZAÇÃO
