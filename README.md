@@ -74,7 +74,17 @@ FASE PRÁTICA - PROJETO - FASE 4 [CUBO NO ANALYSIS SERVICES]
 
 FASE PRÁTICA - PROJETO - FASE 4 [REPORTING SERVICES]
 
-* Configuração de Servidor de Relatórios
+* Configuração de Servidor de Relatórios (Report Server)
+* Criando o Shared DataSource
+* Criando o DataSet
+* Formatação de Relatórios | Trabalhando com a Toolbox
+* Header e Footer | Painel de Propriedades
+* Trabalhando com Expressões | Built-in Fields
+* Classificação | Interactive Sorting
+* Agregações | Row Groups
+* Conectando ao Cubo | Query MDX
+* Row Visibility
+* Deploy de Relatórios
 * 
 * 
-
+* 
