@@ -53,8 +53,12 @@
     <DataSource Include="DS_DW.rds" />
   </ItemGroup>
   <ItemGroup>
+    <Report Include="DetalheProdutos.rdl" />
+    <Report Include="Grafico por Regiões.rdl" />
+    <Report Include="RelatorioFornecedoresAno.rdl" />
     <Report Include="RelatorioProdutosCubo.rdl" />
     <Report Include="RelatorioRegiaoVendas.rdl" />
+    <Report Include="RelatorioVendedorTempo.rdl" />
     <Report Include="Rel_Clientes.rdl" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Reporting Services\Microsoft.ReportingServices.MSBuilder.targets" />

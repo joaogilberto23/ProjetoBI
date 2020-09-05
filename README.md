@@ -85,6 +85,16 @@ FASE PRÁTICA - PROJETO - FASE 4 [REPORTING SERVICES]
 * Conectando ao Cubo | Query MDX
 * Row Visibility
 * Deploy de Relatórios
+* Matrix de Vendedores
+* Formatação Condicional
+* Conectando a Views
+* Relatório com Parâmetros
+* Criando Links entre Relatórios
+* Criando Gráficos
+* Exibindo Relatórios no Portal Web
+
+FASE PRÁTICA - PROJETO - FASE 5 [INFRAESTRUTURA]
+
 * 
 * 
 * 
